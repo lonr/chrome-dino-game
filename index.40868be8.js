@@ -1,0 +1,1 @@
+window.errorPageController={trackEasterEgg:function(){setTimeout((function(){const e=window.localStorage.getItem("dinoHighScore")??"0";window.initializeEasterEggHighScore(parseInt(e))}),0)},updateEasterEggHighScore:function(e){window.localStorage.setItem("dinoHighScore",String(e))},resetEasterEggHighScore:function(){window.localStorage.setItem("dinoHighScore","0")}};
