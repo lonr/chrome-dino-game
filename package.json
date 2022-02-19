@@ -1,0 +1,48 @@
+{
+  "name": "chrome-dino-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The dino game extracted from the Chromium source code",
+  "homepage": "https://github.com/lonr/chrome-dino-game#readme",
+  "bugs": {
+    "url": "https://github.com/lonr/chrome-dino-game/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lonr/chrome-dino-game.git"
+  },
+  "license": "BSD-3-Clause",
+  "author": "lonr",
+  "source": "src/index.html",
+  "scripts": {
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rimraf dist && parcel",
+    "build": "rimraf dist && parcel build",
+    "commit": "cz",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier . --check",
+    "lint:spellcheck": "cspell \"**/*.{md,mdx,ts,js,tsx,jsx}\"",
+    "lint:markdown": "markdownlint \"**/*.md\"",
+    "fix": "run-s fix:eslint fix:prettier fix:markdown",
+    "fix:eslint": "eslint . --fix",
+    "fix:prettier": "prettier . --write",
+    "fix:markdown": "markdownlint \"**/*.md\" --fix"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "cspell": "^5.18.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "markdownlint-cli": "^0.31.1",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.3.1",
+    "prettier": "2.5.1",
+    "rimraf": "^3.0.2"
+  }
+}
